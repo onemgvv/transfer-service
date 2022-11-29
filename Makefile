@@ -12,5 +12,8 @@ dev:
 db_up:
 	migrate -path ./schema -database "postgresql://postgres:po_psql@localhost:5432/wallet?sslmode=disable" up
 
+run_sub:
+	go run cmd/sub/app.go
+
 db_down:
 	migrate -path ./schema -database "postgresql://postgres:po_psql@localhost:5432/wallet?sslmode=disable" down
